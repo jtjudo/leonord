@@ -23,7 +23,7 @@ $working_mode = get_field('working_mode', 'option');
         </svg>
         <a href="<?= get_home_url() ?>">
             <picture>
-                <img loading="lazy" src="<?= $logo['url'] ?>" alt="<?= $logo['title'] ?>">
+                <img loading="lazy" src="<?= $logo['url'] ?? '' ?>" alt="<?= $logo['title'] ?? '' ?>">
             </picture>
         </a>
         <svg xmlns="http://www.w3.org/2000/svg" width="651" height="1" viewBox="0 0 651 1" fill="none">
@@ -225,7 +225,7 @@ $working_mode = get_field('working_mode', 'option');
         <div class="footer-privacy-policy">
             <a class="footer__logo-bottom" href="<?= get_home_url() ?>">
                 <picture>
-                    <img loading="lazy" src="<?= $logo['url'] ?>" alt="<?= $logo['title'] ?>">
+                    <img loading="lazy" src="<?= $logo['url'] ?? '' ?>" alt="<?= $logo['title'] ?? '' ?>">
                 </picture>
             </a>
             <p><?= date("Y"); ?></p>

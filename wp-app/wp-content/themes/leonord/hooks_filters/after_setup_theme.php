@@ -6,8 +6,7 @@ if (function_exists('add_theme_support')) {
 
 add_action('after_setup_theme', function () {
     register_nav_menus([
-        'header_menu_desktop' => 'Меню хедер desktop',
-        'header_menu_mobile' => 'Меню хедер mobile',
+        'header_menu' => 'Меню хедер',
         'footer_catalog_col_1' => 'Меню футер 1',
         'footer_catalog_col_2' => 'Меню футер 2',
     ]);
