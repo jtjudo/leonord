@@ -1,13 +1,162 @@
 header {
-  max-width: 1790px;
-  margin: 0 auto;
+  height: 136px;
   padding: 0 40px;
   display: flex;
-  justify-content: space-between;
+  position: relative;
+
+  @include _1280 {
+    height: 114px;
+  }
+
+  .header__wrapper-desktop {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1790px;
+    width: 100%;
+    margin: 0 auto;
+    align-items: center;
+
+    @include _1280 {
+      display: none;
+    }
+  }
 
   @include _992 {
     padding: 0 20px;
   }
 
+  .header__logo {
+    max-width: 165px;
 
+    img {
+      min-width: 165px;
+    }
+  }
+
+  .header__menu {
+    display: flex;
+    gap: 78px;
+
+    @include _1700 {
+      gap: 16px;
+    }
+  }
+
+  .header-items {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    gap: 78px;
+
+    @include _1700 {
+      gap: 16px;
+    }
+
+    .catalog {
+        padding: 17px 25px;
+        border: 0.5px solid $c-gray1;
+
+      &:before {
+        margin-right: 10px;
+        content: url("data:image/svg+xml;charset=UTF-8, %3csvg xmlns='http://www.w3.org/2000/svg' width='22' height='15' viewBox='0 0 22 15' fill='none'%3e%3crect y='0.5' width='22' height='2' rx='1' fill='%23B5B5B5'/%3e%3crect y='6.5' width='22' height='2' rx='1' fill='%23B5B5B5'/%3e%3crect y='12.5' width='11' height='2' rx='1' fill='%23B5B5B5'/%3e%3c/svg%3e");
+      }
+    }
+
+    a {
+      font-size: 17px;
+      line-height: 21px;
+      letter-spacing: 0.04em;
+      color: $c-white;
+      text-transform: uppercase;
+      white-space: nowrap;
+
+      &:hover {
+        color: $c-orange;
+      }
+    }
+
+    &.mobile {
+      flex-direction: column;
+      margin-top: 40px;
+    }
+  }
+
+  .header__contact {
+    display: flex;
+    align-items: center;
+
+    svg {
+      min-width: 45px;
+      margin-right: 8px;
+    }
+  }
+
+  .header__contact-phone-wrapper {
+    font-family: 'Neo Sans Cyr Medium';
+    font-weight: 400;
+    font-size: 16.3587px;
+    line-height: 21px;
+    color: $c-white;
+
+    @include _1440 {
+      display: none;
+    }
+
+    .header__contact-phone {
+      display: flex;
+      align-items: center;
+
+      svg {
+        min-width: unset;
+        margin-right: 0;
+        margin-left: 10px;
+      }
+    }
+
+    span {
+      font-size: 14.3139px;
+      line-height: 21px;
+      color: $c-gray1;
+
+      border-bottom: 1px dashed $c-gray1;
+    }
+  }
+
+  .header__line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .header__wrapper-mobile {
+    display: none;
+
+    @include _1280 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    &-menu {
+      display: none;
+      position: absolute;
+      top: 113px;
+      left: 0;
+      height: calc(100vh - 113px);
+      width: 100vw;
+      background: $c-background;
+      z-index: 100;
+
+      &.js-open {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+
+  .header__burger {
+    cursor: pointer;
+  }
 }

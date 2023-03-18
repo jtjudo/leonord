@@ -53,7 +53,6 @@
 
     p {
       font-family: 'Neo Sans Cyr Medium';
-      font-weight: 400;
       font-size: 18px;
       line-height: 21px;
       color: $c-white;
@@ -74,7 +73,6 @@
 
       a {
         color: $c-gray;
-        font-weight: 400;
         font-size: 18px;
         line-height: 30px;
 
@@ -114,7 +112,6 @@
 
     .col-bottom-data {
       color: $c-white;
-      font-weight: 400;
       font-size: 18px;
       line-height: 30px;
       display: flex;
@@ -134,6 +131,7 @@
       display: flex;
       margin: 0 auto;
       max-width: 1650px;
+      width: 100%;
     }
 
     .footer-privacy-policy {
@@ -149,13 +147,11 @@
 
       p {
         font-family: 'Neo Sans Cyr Light';
-        font-weight: 400;
         font-size: 14px;
         line-height: 21px;
         color: $c-white;
         margin-bottom: 16px;
         letter-spacing: 0.04em;
-        font-feature-settings: 'pnum' on, 'lnum' on;
       }
     }
   }
