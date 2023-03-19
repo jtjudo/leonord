@@ -17,6 +17,7 @@ class Hero {
 
       pagination: {
         el: ".swiper-pagination",
+        clickable: true
       },
 
       navigation: {
