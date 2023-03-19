@@ -10,3 +10,4 @@
 /**** MODULES ****/
 //=include ../../modules/about-company/about-company.js
 //=include ../../modules/popular-product/popular-product.js
+//=include ../../modules/hero/hero.js

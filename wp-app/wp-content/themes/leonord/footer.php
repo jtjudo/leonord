@@ -89,7 +89,7 @@ $working_mode = get_field('working_mode', 'option');
                             </svg>
                         </div>
                         <div class="col-bottom-data">
-                            <?= $phone ?? '' ?>
+                            <a href="tel:<?= $phone ?? '' ?>"> <?= $phone ?? '' ?> </a>
                             <span>Работаем <?= $working_mode ?? '' ?></span>
                         </div>
                     </div>
@@ -116,7 +116,7 @@ $working_mode = get_field('working_mode', 'option');
                             </svg>
                         </div>
                         <div class="col-bottom-data">
-                            <?= $email ?? '' ?>
+                            <a href="email:<?= $email ?? '' ?>"><?= $email ?? '' ?></a>
                             <span>Отдел продаж</span>
                         </div>
                     </div>
@@ -230,7 +230,10 @@ $working_mode = get_field('working_mode', 'option');
             </a>
             <p><?= date("Y"); ?></p>
             <p>Политика конфиденциальности</p>
-            <p>Согласие на обработку персональных данных</p>
+            <div class="footer-privacy-policy__bottom">
+                <p>Согласие на обработку персональных данных</p>
+                <p>Разработка сайта — Digital-студия «Акцепт»</p>
+            </div>
         </div>
     </div>
 </footer>
