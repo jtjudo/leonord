@@ -14,8 +14,8 @@
 $logo = get_field('logo', 'option');
 $phone = get_field('phone', 'option');
 ?>
-<header class="header" id="header">
-    <div class="header__wrapper-desktop">
+<header class="header" id="header" <?php if (is_front_page()) : ?>style="background: #202020CC" <?php endif; ?>>
+    <div class="header__wrapper-desktop container-xl">
         <div class="header__logo">
             <a href="<?= get_home_url() ?>">
                 <picture>
@@ -52,7 +52,7 @@ $phone = get_field('phone', 'option');
             </svg>
             <div class="header__contact-phone-wrapper">
                 <div class="header__contact-phone">
-                    <?= $phone ?? '' ?>
+                    <a href="tel:<?= $phone ?? '' ?>"> <?= $phone ?? '' ?> </a>
                     <svg xmlns="http://www.w3.org/2000/svg" width="11" height="7" viewBox="0 0 11 7" fill="none">
                         <path d="M6.28684 6.55986L10.8367 2.00995C10.942 1.90472 11 1.76424 11 1.61445C11 1.46467 10.942 1.32419 10.8367 1.21895L10.5017 0.883885C10.2834 0.665853 9.92863 0.665853 9.71068 0.883885L5.89001 4.70455L2.06511 0.879645C1.95979 0.774411 1.81939 0.716308 1.66969 0.716308C1.51982 0.716308 1.37942 0.774411 1.27402 0.879645L0.939121 1.21471C0.833804 1.32003 0.775784 1.46043 0.775784 1.61021C0.775784 1.76 0.833804 1.90048 0.939121 2.00571L5.4931 6.55986C5.59875 6.66534 5.73981 6.72328 5.88976 6.72294C6.0403 6.72328 6.18127 6.66534 6.28684 6.55986Z"
                               fill="white"/>
@@ -75,7 +75,7 @@ $phone = get_field('phone', 'option');
             </defs>
         </svg>
     </div>
-    <div class="header__wrapper-mobile">
+    <div class="header__wrapper-mobile container-xl">
         <div class="header__burger">
             <svg xmlns="http://www.w3.org/2000/svg" width="36" height="24" viewBox="0 0 36 24" fill="none">
                 <rect y="0.728516" width="36" height="3.27273" rx="1.63636" fill="#B5B5B5"/>

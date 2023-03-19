@@ -1,6 +1,5 @@
 header {
   height: 136px;
-  padding: 0 40px;
   display: flex;
   position: relative;
 
@@ -11,9 +10,6 @@ header {
   .header__wrapper-desktop {
     display: flex;
     justify-content: space-between;
-    max-width: 1790px;
-    width: 100%;
-    margin: 0 auto;
     align-items: center;
 
     @include _1280 {
@@ -105,6 +101,10 @@ header {
     .header__contact-phone {
       display: flex;
       align-items: center;
+
+      a {
+        color: $c-white;
+      }
 
       svg {
         min-width: unset;
