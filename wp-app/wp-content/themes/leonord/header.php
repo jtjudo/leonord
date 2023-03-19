@@ -15,7 +15,7 @@ $logo = get_field('logo', 'option');
 $phone = get_field('phone', 'option');
 ?>
 <header class="header" id="header">
-    <div class="header__wrapper-desktop">
+    <div class="header__wrapper-desktop container-xl">
         <div class="header__logo">
             <a href="<?= get_home_url() ?>">
                 <picture>
@@ -75,7 +75,7 @@ $phone = get_field('phone', 'option');
             </defs>
         </svg>
     </div>
-    <div class="header__wrapper-mobile">
+    <div class="header__wrapper-mobile container-xl">
         <div class="header__burger">
             <svg xmlns="http://www.w3.org/2000/svg" width="36" height="24" viewBox="0 0 36 24" fill="none">
                 <rect y="0.728516" width="36" height="3.27273" rx="1.63636" fill="#B5B5B5"/>

@@ -11,7 +11,44 @@ class Ajax
 
     public function register(): void
     {
-//        add_action('wp_ajax_example_kitchens', [$this, 'example_kitchens']);
-//        add_action('wp_ajax_nopriv_example_kitchens', [$this, 'example_kitchens']);
+//        add_action('wp_ajax_recommendations', [$this, 'get_recommendations']);
+//        add_action('wp_ajax_nopriv_recommendations', [$this, 'get_recommendations']);
+    }
+
+    public function get_recommendations(
+        string $format,
+    ): array
+    {
+        $args = [];
+        $defaultArgs = [
+            'post_type' => 'products',
+            'posts_per_page' => -1,
+            'post_status' => 'publish',
+        ];
+
+        if ($format === 'new') {
+            $args = [
+                'orderby' => 'publish_date',
+                'order' => 'DESC',
+            ];
+        }
+
+        if ($format === 'popular') {
+            $args = [
+                'meta_key' => 'popular',
+                'meta_value' => '1',
+                'compare' => '=',
+            ];
+        }
+
+        if ($format === 'discount') {
+            $args = [
+                'meta_key' => 'discount',
+                'meta_value' => '1',
+                'compare' => '=',
+            ];
+        }
+
+        return get_posts(array_merge($defaultArgs, $args));
     }
 }
