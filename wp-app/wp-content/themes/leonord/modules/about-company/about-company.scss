@@ -1,0 +1,122 @@
+.about-company {
+
+  &__link {
+    margin-top: 30px;
+  }
+
+  &__logo {
+    width: 210px;
+    height: 210px;
+
+    left: 235px;
+    position: absolute;
+
+    @include _1280 {
+      left: 450px;
+    }
+
+    @include _992 {
+      display: none;
+    }
+  }
+
+  &__description-wrapper {
+
+    color: $c-white;
+    line-height: 30px;
+    font-size: 16px;
+    font-weight: 400;
+    max-width: 615px;
+    position: relative;
+    padding-top: 25px;
+
+    @include _992 {
+      padding-top: 50px;
+    }
+
+    @include _768 {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      order: -1;
+    }
+
+    li {
+      min-height: 20px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      top: -25px;
+      height: 1px;
+      background: linear-gradient(90deg, #4b4b4b 0%, #787878 60%);
+
+      @include _992 {
+        top: 0;
+      }
+    }
+  }
+
+  .container-xs {
+    position: relative;
+  }
+
+  &__wrapper {
+    display: flex;
+    gap: 105px;
+    padding-top: 172px;
+    padding-bottom: 25px;
+
+    @include _1280 {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @include _992 {
+      padding-top: 0;
+    }
+
+    @include _768 {
+      padding-bottom: 50px;
+      gap: 50px;
+    }
+
+    @include _480 {
+      gap: 40px;
+    }
+
+  }
+
+  &__left {
+    max-width: 632px;
+    width: 100%;
+    position: relative;
+  }
+
+  &__slider {
+    overflow: hidden;
+
+    .swiper-pagination {
+      position: absolute;
+      bottom: -10px;
+
+      @include _768 {
+        bottom: -40px;
+      }
+
+      @include _480 {
+        bottom: -35px;
+      }
+    }
+  }
+
+  &__item {
+    max-width: 632px;
+    width: 100%;
+    max-height: 386px;
+  }
+}
+

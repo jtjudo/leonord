@@ -20,8 +20,51 @@ body {
     }
 }
 
+.container-xs {
+    max-width: 1374px;
+    margin: 0 auto;
+    padding: 0 40px;
+    width: 100%;
+
+    @include _992 {
+        padding: 0 20px;
+    }
+}
+
 .main {
     min-height: 100vh;
     font-weight: 400;
     font-size: 16px;
+}
+
+.heading {
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 61px;
+    font-family: $fontLight;
+    color: $c-white;
+    margin-bottom: 21px;
+
+    @include _768 {
+        text-align: center;
+    }
+
+    @include _480 {
+        margin-bottom: 18px;
+        font-size: 35px;
+        line-height: 36px;
+    }
+}
+
+.swiper-pagination {
+    &-bullet {
+        width: 10px;
+        height: 10px;
+        border: 1px solid $c-gray1;
+        background: transparent;
+
+        &-active {
+            background-color: $c-gray1;
+        }
+    }
 }
