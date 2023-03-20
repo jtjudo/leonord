@@ -3,6 +3,10 @@
 //=include libs/fancybox.js
 
 
+/* COMPONENTS */
+//=include components/loader.js
+
+
 /* PARTIALS */
 //=include partials/header.js
 

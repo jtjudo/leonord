@@ -6,6 +6,14 @@
     gap: 30px;
     margin-bottom: 61px;
 
+    &.single-product {
+      grid-template-columns: 1fr 1fr;
+
+      @include _768 {
+        grid-template-columns: 1fr;
+      }
+    }
+
     @include _768 {
       grid-template-columns: 1fr;
       text-align: center;
@@ -42,6 +50,36 @@
       @include _768 {
         display: none;
       }
+    }
+  }
+
+  .popular-product__wrapper {
+    overflow: hidden;
+    position: relative;
+  }
+
+  .popular-product-sort {
+    display: flex;
+    gap: 35px;
+    justify-content: flex-end;
+
+    @include _768 {
+      justify-content: center;
+    }
+
+    .button {
+      font-size: 18px;
+      line-height: 26px;
+      color: $c-white;
+      padding: 0;
+      border: unset;
+      border-bottom: 1px solid $c-gray1;
+    }
+
+    .button.button-active {
+      color: $c-orange;
+      border: unset;
+      border-bottom: 1px solid $c-orange;
     }
   }
 
