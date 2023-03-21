@@ -11,14 +11,22 @@ class Ajax
 
     public function register(): void
     {
-//        add_action('wp_ajax_recommendations', [$this, 'get_recommendations']);
-//        add_action('wp_ajax_nopriv_recommendations', [$this, 'get_recommendations']);
+        add_action('wp_ajax_popular-product', [$this, 'popularProduct']);
+        add_action('wp_ajax_popular-product', [$this, 'popularProduct']);
+    }
+
+    public function popularProduct(): void
+    {
+        $format = $_POST['format'];
+        $products = $this->get_recommendations($format);
+
+        include $this->ajax_blocks_path . 'popular-product-ajax.php';
+        wp_die();
     }
 
     public function get_recommendations(
         string $format,
-    ): array
-    {
+    ): array {
         $args = [];
         $defaultArgs = [
             'post_type' => 'products',
@@ -28,8 +36,9 @@ class Ajax
 
         if ($format === 'new') {
             $args = [
-                'orderby' => 'publish_date',
-                'order' => 'DESC',
+                'meta_key' => 'new',
+                'meta_value' => '1',
+                'compare' => '=',
             ];
         }
 
