@@ -124,6 +124,16 @@ function custom_register_post_types()
             "supports" => ['title', 'editor'],
             "has_archive" => false,
         ],
+        [
+            "post_type_name" => "videos",
+            "name" => "Видео",
+            "name_plural" => "Видео",
+            "name_lowercase" => "Видео",
+            "name_lowercase_plural" => "Видео",
+            'menu_icon' => 'dashicons-format-video',
+            "supports" => ['title', 'editor'],
+            "has_archive" => false,
+        ],
     ];
 
     foreach ($post_types as $post_type) {

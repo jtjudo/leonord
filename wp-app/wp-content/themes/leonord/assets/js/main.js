@@ -5,6 +5,7 @@
 
 /* PARTIALS */
 //=include partials/header.js
+//=include partials/video-slider.js
 
 
 /**** MODULES ****/

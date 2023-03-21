@@ -14,12 +14,15 @@
 @import "partials/footer";
 @import "partials/font-sizes";
 @import "partials/404";
+@import "partials/video-slider";
 
 /* MODULES */
 @import "modules/about-company/about-company";
 @import "modules/popular-product/popular-product";
 @import "modules/hero/hero";
+@import "modules/video-module/video-module";
 
 /* COMPONENTS */
 @import "components/product-card";
+@import "components/video-card";
 

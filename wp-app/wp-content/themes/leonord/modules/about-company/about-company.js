@@ -1,10 +1,11 @@
-const swiper = new Swiper('.about-company__slider', {
+new Swiper('.about-company__slider', {
   pagination: {
-    el: '.swiper-pagination',
+    el: '.about-company__slider .swiper-pagination',
+    clickable: true,
   },
 
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.about-company__slider .swiper-button-next',
+    prevEl: '.about-company__slider .swiper-button-prev',
   },
 });

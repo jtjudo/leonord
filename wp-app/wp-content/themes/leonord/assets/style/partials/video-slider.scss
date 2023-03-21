@@ -1,0 +1,21 @@
+.video-slider {
+  position: relative;
+  overflow: hidden;
+
+
+  &__wrapper {
+    position: relative;
+
+    @include _480 {
+      padding-bottom: 80px;
+    }
+  }
+
+  .swiper-slide {
+    max-width: 673px;
+  }
+
+  .swiper-navigation {
+
+  }
+}

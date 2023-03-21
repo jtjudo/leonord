@@ -51,4 +51,17 @@ class Ajax
 
         return get_posts(array_merge($defaultArgs, $args));
     }
+
+    public function getVideos(
+        $count = 10,
+    ):array {
+        $args = [
+            'post_type' => 'videos',
+            'posts_per_page' => $count,
+            'post_status' => 'publish',
+            'orderby' => 'rand'
+        ];
+
+        return get_posts($args);
+    }
 }
