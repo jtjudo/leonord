@@ -23,9 +23,7 @@ class youtubeVideoPlayer {
     })
   }
 
-  /**
-   * @param {string} id
-   */
+  /** @param {string} id */
   openVideoById(id) {
     new Fancybox([
       {
