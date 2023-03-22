@@ -30,6 +30,7 @@ $ajax = new Ajax();
                 ?>
             </div>
         </div>
+        <?php include get_template_directory() . '/assets/images/text-overlay-img.php' ?>
     </section>
 <?php else: ?>
     <h2 style="font-family: 'Mark', sans-serif;">Видео модуль</h2>

@@ -3,10 +3,11 @@ include_once(get_template_directory() . '/helpers/YoutubeHelper.php');
 
 $title = $video->post_title;
 $link = get_field('link', $video);
-$previewLink = !empty($link) ?  getYoutubePreview(extractIdFromLink($link)) : null;
+$videoId = !empty($link) ? extractIdFromLink($link) : null;
+$previewLink = !empty($link) ?  getYoutubePreview($videoId) : null;
 ?>
 
-<div class="video-card">
+<div class="video-card js-video-card" data-id="<?= $videoId ?>">
     <img
         class="video-card__image"
         loading="lazy"

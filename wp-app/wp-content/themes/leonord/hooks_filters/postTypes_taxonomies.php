@@ -134,6 +134,16 @@ function custom_register_post_types()
             "supports" => ['title', 'editor'],
             "has_archive" => false,
         ],
+        [
+            "post_type_name" => "news",
+            "name" => "Новости",
+            "name_plural" => "Новости",
+            "name_lowercase" => "Новости",
+            "name_lowercase_plural" => "Новости",
+            'menu_icon' => 'dashicons-info',
+            "supports" => ['title', 'editor'],
+            "has_archive" => false,
+        ],
     ];
 
     foreach ($post_types as $post_type) {
