@@ -10,6 +10,7 @@ $c-gray1: #B5B5B5;
 $c-gray2: #4E5058;
 $c-gray3: #7C7C7C;
 $c-gray4: #AFAFAF;
+$c-gray5: #6A6A6A;
 $c-transparent-dark: #393A3E29;
 $c-light-gray: #F9F9F9;
 
@@ -20,6 +21,12 @@ $transition: all .3s ease-in-out;
 
 @mixin _1700 {
     @media (max-width: 1700px) {
+        @content;
+    }
+}
+
+@mixin _1600 {
+    @media (max-width: 1600px) {
         @content;
     }
 }
