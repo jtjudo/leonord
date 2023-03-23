@@ -6,11 +6,11 @@
 
   &:hover {
     & path {
-      fill: #F47D2D;;
+      fill: $c-orange-light;;
     }
 
     & .news-card__title {
-      color: #F47D2D;
+      color: $c-orange-light;
     }
   }
 

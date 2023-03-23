@@ -1,0 +1,30 @@
+.reviews-module {
+  padding-bottom: 70px;
+}
+
+.reviews-slider {
+  position: relative;
+  overflow: hidden;
+
+  &__wrapper {
+    position: relative;
+
+    & .swiper-pagination {
+      @include _480 {
+        display: none;
+      }
+    }
+
+    @include _480 {
+      padding-bottom: 80px;
+    }
+  }
+
+  .swiper-slide {
+    max-width: 674px;
+  }
+
+  .swiper-navigation {
+
+  }
+}
