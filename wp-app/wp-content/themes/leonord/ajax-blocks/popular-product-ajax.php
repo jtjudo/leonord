@@ -1,14 +1,6 @@
 <div class="swiper swiper-popular-product">
     <div class="swiper-wrapper">
         <?php foreach ($products as $product) : ?>
-            <?php
-            $images = get_field('images', $product->ID);
-            $image = !empty($images) ? $images[0] : '';
-            $vendorCode = get_field('vendor_code', $product->ID);
-            $materials = get_the_terms($product->ID, 'product-material');
-            $title = $product->post_title;
-            $link = get_post_permalink($product->ID);
-            ?>
             <div class="swiper-slide">
                 <?php include get_template_directory() . '/components/product-card.php' ?>
             </div>

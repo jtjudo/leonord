@@ -12,6 +12,7 @@
 //=include partials/reviews-slider.js
 //=include partials/video-slider.js
 //=include partials/news-slider.js
+//=include partials/novelty-slider.js
 //=include partials/YoutubeVideoPlayer.js
 
 

@@ -1,3 +1,12 @@
+<?php
+    $images = get_field('images', $product->ID);
+    $image = !empty($images) ? $images[0] : '';
+    $vendorCode = get_field('vendor_code', $product->ID);
+    $materials = get_the_terms($product->ID, 'product-material');
+    $title = $product->post_title;
+    $link = get_post_permalink($product->ID);
+?>
+
 <a href="<?= $link ?? '' ?>" class="product-card">
     <div class="product-card__top">
         <svg class="product-card__top-cursor" xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44" fill="none">
