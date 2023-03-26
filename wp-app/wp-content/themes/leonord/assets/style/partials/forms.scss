@@ -4,6 +4,7 @@
   backdrop-filter: blur(5.69277px);
   width: 100%;
   max-width: 450px;
+  display: none;
 
   @include _992 {
     padding: 30px 16px;
