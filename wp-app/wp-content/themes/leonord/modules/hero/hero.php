@@ -32,7 +32,7 @@ $slides = get_field('slides');
                                     <div class="slide-left__info">
                                         <h2><?= $headline ?></h2>
                                         <p><?= $subHeadline ?></p>
-                                        <a href="<?= $button['ur'] ?? '' ?>"
+                                        <a class="btn" href="<?= $button['ur'] ?? '' ?>"
                                            target="<?= $button['target'] ?? '' ?>"> <?= $button['title'] ?? '' ?>
                                         </a>
                                     </div>

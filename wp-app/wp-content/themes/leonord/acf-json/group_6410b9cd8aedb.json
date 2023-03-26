@@ -157,6 +157,36 @@
             "placeholder": "",
             "prepend": "",
             "append": ""
+        },
+        {
+            "key": "field_642019133ed9e",
+            "label": "Формы",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_642019283ed9f",
+            "label": "Заказать звонок форма",
+            "name": "back_call",
+            "type": "acf_cf7",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
         }
     ],
     "location": [
@@ -177,5 +207,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1679166577
+    "modified": 1679825557
 }

@@ -1,0 +1,108 @@
+.modal-form {
+  padding: 70px 55px;
+  background: rgba(35, 35, 35, 0.9);
+  backdrop-filter: blur(5.69277px);
+  width: 100%;
+  max-width: 450px;
+  display: none;
+
+  @include _992 {
+    padding: 30px 16px;
+  }
+
+  .form-headline {
+    font-family: 'Neo Sans Cyr Light';
+    font-weight: 400;
+    font-size: 32.1107px;
+    line-height: 33px;
+    color: $c-white;
+    text-align: center;
+    margin-bottom: 21px;
+  }
+
+  .carousel__button.is-close {
+    margin: 0;
+    top: -35px;
+    right: -35px;
+
+    @include _992 {
+      top: 10px;
+      right: 10px;
+    }
+
+    path {
+      color: $c-white;
+    }
+  }
+
+  .send-btn {
+    position: relative;
+
+    .btn {
+      cursor: pointer;
+      background: inherit;
+      width: 100%;
+    }
+
+    .wpcf7-spinner {
+      position: absolute;
+      left: 15px;
+      top: 22px;
+      background-color: $c-orange;
+      margin: 0;
+    }
+
+    .private-policy {
+      margin-top: 19px;
+      font-family: 'Neo Sans Cyr Light';
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 16px;
+      color: $c-white;
+      display: flex;
+
+      a {
+        color: $c-white;
+        border-bottom: 1px solid $c-white;
+      }
+
+      &:before {
+        margin: 0 11px 0 25px;
+        content: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='15' height='15' viewBox='0 0 15 15' fill='none'%3e%3cpath d='M10.8287 15L4.67018 15L-3.86611e-07 10.5777L-9.40404e-07 4.24303L4.32927 5.75198e-07L10.6707 2.08093e-08L15 4.24303L15 10.5777L10.8287 15Z' fill='%23FF893E'/%3e%3cg clip-path='url(%23clip0_196_1940)'%3e%3cpath d='M10.9121 5.88475C10.795 5.76758 10.605 5.76758 10.4879 5.88475L6.89369 9.47897L5.51214 8.09742C5.39499 7.98026 5.20505 7.98027 5.08787 8.09742C4.97071 8.21458 4.97071 8.40451 5.08787 8.52168L6.68155 10.1153C6.79867 10.2325 6.98875 10.2324 7.10582 10.1153L10.9121 6.30901C11.0293 6.19186 11.0293 6.00191 10.9121 5.88475Z' fill='white'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='clip0_196_1940'%3e%3crect width='6' height='6' fill='white' transform='translate(5 5)'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
+      }
+    }
+  }
+
+  input[type=text], input[type=tel], input[type=email], input[type=number] {
+    font-family: 'Neo Sans Cyr Medium';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+
+    color: $c-white;
+    display: flex;
+    width: 100%;
+    padding: 20px 25px;
+    background: inherit;
+    border: 1px solid $c-white;
+    margin-bottom: 21px;
+    direction: unset;
+    outline: unset;
+
+    &::placeholder {
+      color: $c-gray6;
+    }
+
+    &.wpcf7-not-valid {
+      border: 1px solid $c-red;
+    }
+  }
+
+  .wpcf7-not-valid-tip {
+    display: none;
+  }
+
+  .wpcf7 form .wpcf7-response-output {
+    display: none;
+  }
+}
