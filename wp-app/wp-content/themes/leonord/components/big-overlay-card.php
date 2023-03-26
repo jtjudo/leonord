@@ -2,10 +2,11 @@
 
 
 $previewImage = !empty($previewImage) ? $previewImage['url'] : null;
-$title = $title ?? 'Перейти в каталог';
+$bigOverlayTitle = $bigOverlayTitle ?? 'Перейти в каталог';
+$link = $link ?? [];
 ?>
 
-<div class="big-overlay-card">
+<a href="<?= $link['url'] ?? '' ?>" class="big-overlay-card">
     <img
         class="big-overlay-card__image"
         loading="lazy"
@@ -13,7 +14,7 @@ $title = $title ?? 'Перейти в каталог';
         alt="Превью"
     >
     <div class="big-overlay-card__overlay">
-        <p class="big-overlay-card__title"><?= $title ?></p>
+        <p class="big-overlay-card__title"><?= $bigOverlayTitle ?></p>
         <?php include(get_template_directory() . '/assets/images/right-arrow.php') ?>
     </div>
-</div>
+</a>

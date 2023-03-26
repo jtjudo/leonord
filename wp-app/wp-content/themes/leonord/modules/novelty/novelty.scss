@@ -47,6 +47,11 @@
     @include _480 {
       display: none;
     }
+
+    &__bottom-wrapper {
+      display: flex;
+      justify-content: center;
+    }
   }
 
   &-slider {
@@ -55,13 +60,31 @@
     &__big-item {
       max-width: 686px;
       height: unset;
+      margin-right: 30px;
+      width: 100%;
+
+      @include _768 {
+        margin-right: 0;
+      }
+
+      @include _480 {
+        & .big-overlay-card {
+          min-width: auto;
+        }
+      }
     }
 
     &__wrapper {
+      display: flex;
       position: relative;
 
+      @include _768 {
+        flex-direction: column;
+        gap: 35px;
+      }
+
       @include _480 {
-        padding-bottom: 80px;
+        padding-bottom: 36px;
       }
 
       .swiper-button-prev,
@@ -71,14 +94,23 @@
         @include _992 {
           top: 42%;
         }
+
+        @include _768 {
+          display: none;
+        }
       }
     }
 
     &__item {
       max-width: fit-content;
+      min-width: 160px;
 
       @include _992 {
         max-width: 334px;
+      }
+
+      @include _768 {
+        max-width: fit-content;
       }
     }
   }

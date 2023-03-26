@@ -1,5 +1,5 @@
 new Swiper('.novelty-slider', {
-  spaceBetween: 50,
+  spaceBetween: 17,
   slidesPerView: "auto",
   pagination: {
     el: '.novelty-slider .swiper-pagination',
@@ -9,4 +9,10 @@ new Swiper('.novelty-slider', {
     nextEl: '.novelty-slider__wrapper .swiper-button-next',
     prevEl: '.novelty-slider__wrapper .swiper-button-prev',
   },
+
+  breakpoints: {
+    480: {
+      spaceBetween: 50,
+    },
+  }
 });

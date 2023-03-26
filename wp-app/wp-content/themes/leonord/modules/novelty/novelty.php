@@ -8,28 +8,40 @@ Mode: preview
 ?>
 
 <?php
-$products = get_field('products');
 $previewImage = get_field('main_image');
+$title = get_field('title');
+$link = get_field('link');
 
+$ajax = new Ajax();
+
+$products = $ajax->get_recommendations('new');
+
+$bigOverlayTitle = $link ? $link['title'] : null;
 ?>
 
 <?php if (!is_admin()) : ?>
     <section class="novelty">
         <div class="container-xs">
             <div class="novelty__header">
-                <h2 class="news__title heading">Новинки</h2>
-                <a href="" class="news__see-more see-more">Смотреть все</a>
+                <h2 class="news__title heading"><?= $title ?? ''?></h2>
+                <a
+                    <?php if ($link) : ?>
+                        href="<?= $link['url'] ?>"
+                    <?php endif; ?>
+                    class="novelty__see-more see-more"
+                >
+                    Смотреть все
+                </a>
             </div>
 
             <div class="novelty-slider__wrapper">
+                <?php if(!empty($previewImage)) : ?>
+                    <div class="novelty-slider__big-item">
+                        <?php include get_template_directory() . '/components/big-overlay-card.php' ?>
+                    </div>
+                <?php endif; ?>
                 <div class="novelty-slider">
                     <div class="swiper-wrapper">
-                        <?php if(!empty($previewImage)) : ?>
-                            <div class="swiper-slide novelty-slider__big-item">
-                                <?php include get_template_directory() . '/components/big-overlay-card.php' ?>
-                            </div>
-                        <?php endif; ?>
-
                         <?php foreach ($products as $product) : ?>
                             <div class="swiper-slide novelty-slider__item">
                                 <?php include get_template_directory() . '/components/product-card.php' ?>
@@ -62,10 +74,19 @@ $previewImage = get_field('main_image');
                         </svg>
                     </div>
                 </div>
-
             </div>
+            <?php if (wp_is_mobile()) : ?>
+            <div class="novelty__see-more__bottom-wrapper">
+                <a
+                    class="see-more novelty__see-more__bottom"
+                >
+                    Смотреть все
+                </a>
+            </div>
+            <?php endif; ?>
         </div>
     </section>
+
 <?php else: ?>
     <h2 style="font-family: 'Mark', sans-serif;">Новинки модуль</h2>
 <?php endif; ?>
