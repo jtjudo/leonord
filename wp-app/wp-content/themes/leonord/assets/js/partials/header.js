@@ -5,6 +5,7 @@ class Header {
 
   init() {
     this.toggleBurgerMenu();
+    this.openContacts();
   }
 
   toggleBurgerMenu() {
@@ -15,6 +16,15 @@ class Header {
     button && button.addEventListener('click', () => {
       menu.classList.toggle('js-open');
       html.style.overflow = (html.style.overflow === 'hidden') ? 'unset' : 'hidden'
+    })
+  }
+
+  openContacts() {
+    const contactsBtn = document.querySelector('.header__contact-phone');
+    const contacts = document.querySelector('.header__contacts-menu');
+
+    contactsBtn && contactsBtn.addEventListener('click', () => {
+      contacts.classList.toggle('js-open');
     })
   }
 }

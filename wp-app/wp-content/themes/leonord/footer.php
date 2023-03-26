@@ -6,9 +6,17 @@ $phone = get_field('phone', 'option');
 $email = get_field('email', 'option');
 $address = get_field('address', 'option');
 $working_mode = get_field('working_mode', 'option');
+$back_call_form = get_field('back_call', 'option');
 ?>
 
 <footer id="footer" class="footer">
+    <div class="modal-form form-back-call" id="back-call">
+        <div class="form-wrapper">
+            <p class="form-headline">Заказать звонок</p>
+            <?= $back_call_form ?>
+        </div>
+    </div>
+
     <div class="container-logo">
         <svg xmlns="http://www.w3.org/2000/svg" width="651" height="1" viewBox="0 0 651 1" fill="none">
             <line x1="0.5" y1="0.5" x2="650.5" y2="0.499943" stroke="url(#paint0_linear_50_1580)" stroke-opacity="0.6"
