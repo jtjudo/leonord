@@ -17,7 +17,6 @@ gulp.task('build', function (cb) {
 })
 
 function style() {
-  const number = getRandomInRange(1000, 1000000);
   return gulp.src(
     [
       'assets/style/main.scss',
@@ -36,7 +35,6 @@ function fonts() {
 }
 
 function scripts() {
-  const number = getRandomInRange(1000, 1000000);
   return gulp.src(
     [
       'assets/js/main.js',
