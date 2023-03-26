@@ -26,7 +26,7 @@ function style() {
     .pipe(sass().on('error', sass.logError))
     .pipe(minifyCSS())
     .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9'))
-    .pipe(concat(`style${number}.min.css`))
+    .pipe(concat(`style.min.css`))
     .pipe(gulp.dest('dist/css'));
 }
 
@@ -44,7 +44,7 @@ function scripts() {
   )
     .pipe(include())
     .on('error', console.log)
-    .pipe(concat(`build${number}.js`))
+    .pipe(concat(`build.js`))
     .pipe(minify({noSource: true}))
     .pipe(gulp.dest('dist/js'))
 }
