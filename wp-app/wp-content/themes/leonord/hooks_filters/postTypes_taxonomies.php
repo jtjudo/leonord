@@ -13,7 +13,7 @@ function create_taxonomy()
 {
     register_taxonomy('product-category', ['products'], [
         'label' => __('product category'),
-        'rewrite' => ['slug' => 'kitchen-category'],
+        'rewrite' => ['slug' => 'product-category'],
         'labels' => [
             'name' => 'Категория продукта',
             'singular_name' => 'Категории продуктов',

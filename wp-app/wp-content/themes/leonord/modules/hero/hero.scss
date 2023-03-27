@@ -221,16 +221,6 @@
     }
   }
 
-  .swiper-button-prev, .swiper-button-next {
-    all: unset;
-    display: flex;
-    cursor: pointer;
-
-    &:after {
-      content: unset;
-    }
-  }
-
   .swiper-pagination {
     all: unset;
     display: flex;
