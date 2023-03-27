@@ -1,0 +1,54 @@
+.reach {
+  margin-bottom: 100px;
+  color: $c-white;
+  position: relative;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+
+    position: relative;
+
+    @include _992 {
+      padding-top: 50px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      top: -25px;
+      height: 1px;
+      background: linear-gradient(270deg, #4b4b4b 0%, #787878 60%);
+
+      @include _992 {
+        top: 0;
+      }
+    }
+  }
+  &__title {
+    margin-bottom: 10px;
+  }
+
+  &__subtitle {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 18px;
+  }
+
+  &__btn {
+    background-color: #38393D;
+    margin: 0 auto;
+  }
+
+  .text-overlay-image {
+    bottom: -255px;
+
+    @include _1440 {
+      display: none;
+    }
+  }
+}
+

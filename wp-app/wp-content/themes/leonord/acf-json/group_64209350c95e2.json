@@ -1,9 +1,9 @@
 {
-    "key": "group_641cad903ae35",
-    "title": "Новинки модуль",
+    "key": "group_64209350c95e2",
+    "title": "Связаться модуль",
     "fields": [
         {
-            "key": "field_642067b4e7cf2",
+            "key": "field_64209350c3d3a",
             "label": "Заголовок",
             "name": "title",
             "type": "text",
@@ -22,10 +22,10 @@
             "append": ""
         },
         {
-            "key": "field_641cadc440859",
-            "label": "Главное изображение",
-            "name": "main_image",
-            "type": "image",
+            "key": "field_642093a2c3d3b",
+            "label": "Подзаголовок",
+            "name": "subtitle",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -34,22 +34,17 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "array",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "",
-            "preview_size": "medium"
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         },
         {
-            "key": "field_641cae1fade52",
-            "label": "Ссылка на каталог",
-            "name": "link",
-            "type": "link",
+            "key": "field_642093aac3d3c",
+            "label": "Название кнопки",
+            "name": "btn_title",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -58,7 +53,11 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "array"
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [
@@ -66,7 +65,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/novelty"
+                "value": "acf\/reach"
             }
         ]
     ],
@@ -79,5 +78,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1679849775
+    "modified": 1679856629
 }
