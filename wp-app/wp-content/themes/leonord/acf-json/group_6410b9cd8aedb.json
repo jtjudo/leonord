@@ -159,8 +159,8 @@
             "append": ""
         },
         {
-            "key": "field_642019133ed9e",
-            "label": "Формы",
+            "key": "field_642315c47c584",
+            "label": "Поля повторяющиеся в нескольких местах",
             "name": "",
             "type": "tab",
             "instructions": "",
@@ -175,10 +175,10 @@
             "endpoint": 0
         },
         {
-            "key": "field_642019283ed9f",
-            "label": "Заказать звонок форма",
-            "name": "back_call",
-            "type": "acf_cf7",
+            "key": "field_6423163f7ff8e",
+            "label": "О компании",
+            "name": "description",
+            "type": "wysiwyg",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -186,7 +186,12 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            }
+            },
+            "default_value": "",
+            "delay": 0,
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1
         }
     ],
     "location": [
@@ -207,5 +212,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1679825557
+    "modified": 1680021135
 }

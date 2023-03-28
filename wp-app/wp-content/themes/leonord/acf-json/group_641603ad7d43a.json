@@ -22,25 +22,6 @@
             "append": ""
         },
         {
-            "key": "field_641603c260436",
-            "label": "Описание",
-            "name": "description",
-            "type": "wysiwyg",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "delay": 0,
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 1
-        },
-        {
             "key": "field_641604e560437",
             "label": "Ссылка",
             "name": "link",
@@ -101,5 +82,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1679165353
+    "modified": 1680021194
 }

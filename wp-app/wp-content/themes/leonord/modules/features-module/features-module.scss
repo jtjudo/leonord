@@ -1,0 +1,102 @@
+.features {
+  color: $c-white;
+  background-repeat: no-repeat;
+  background-position-x: 52%;
+  background-position-y: -30px;
+
+  @include _1440 {
+    background-image: none !important;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 55px;
+
+    @include _992 {
+      flex-direction: column;
+      align-items: center;
+      gap: 50px;
+    }
+  }
+
+  &__right {
+    width: 100%;
+    max-width: 531px;
+    flex-grow: 1;
+    background-repeat: no-repeat;
+    background-position: center;
+
+
+    @include _768 {
+      background-size: contain;
+    }
+
+    @include _480 {
+      background-size: 100% 100%;
+    }
+  }
+
+  &__left {
+    text-align: left;
+  }
+
+  &__heading {
+    margin-right: auto;
+    margin-bottom: 27px;
+  }
+
+  &__description {
+    @include _480 {
+      font-size: 12px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 33px;
+    width: 100%;
+    padding: 72px 90px 94px 90px;
+
+    @include _768 {
+      gap: 25px;
+      //padding: 45px 45px 58px 45px;
+    }
+
+    @include _480 {
+      padding: 35px 33px 35px 33px;
+      gap: 20px;
+    }
+  }
+
+  &__list-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+
+    @include _480 {
+      gap: 18px;
+    }
+  }
+
+  &__value {
+    flex: 0 0 auto;
+    font-family: "Neo Sans Cyr Medium";
+    min-width: 176px;
+    color: $c-orange;
+    font-size: 60px;
+
+    @include _768 {
+      font-size: 35px;
+      gap: 25px;
+      min-width: 100px;
+    }
+
+    @include _480 {
+      font-size: 28px;
+    }
+  }
+
+}

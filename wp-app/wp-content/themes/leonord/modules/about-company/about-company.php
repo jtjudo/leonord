@@ -9,7 +9,7 @@ Mode: preview
 
 <?php
 $title = get_field('title');
-$description = get_field('description');
+$description = get_field('description', 'option');
 $link = get_field('link');
 $gallery = get_field('gallery');
 $secondLogo = get_field('second_logo', 'option');
@@ -41,7 +41,7 @@ $secondLogo = get_field('second_logo', 'option');
                         <div class="swiper-pagination"></div>
                     </div>
                 </div>
-                <div class="about-company__description-wrapper">
+                <div class="about-company__description-wrapper description-block">
                     <?php if (wp_is_mobile()) : ?>
                         <h2 class="about-company__title heading"><?= $title ?? '' ?></h2>
                     <?php endif; ?>
