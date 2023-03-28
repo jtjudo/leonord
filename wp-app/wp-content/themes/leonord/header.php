@@ -165,7 +165,6 @@ $working_mode = get_field('working_mode', 'option');
                             </svg>
                             <p><?= $working_mode ?? '' ?></p>
                         </div>
-
                         <a class="header__contact-form" href="javascript:;" data-fancybox="" data-src="#back-call">НАПИСАТЬ НАМ</a>
                     </div>
                 </div>
