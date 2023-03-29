@@ -1,4 +1,10 @@
 .popular-product {
+  margin-bottom: 120px;
+
+  @include _992 {
+    margin-bottom: 100px;
+  }
+
   .popular-product__top {
     display: grid;
     grid-template-columns: max-content 1fr max-content;
