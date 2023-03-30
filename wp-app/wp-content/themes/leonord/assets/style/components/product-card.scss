@@ -17,6 +17,10 @@
     height: 387px;
     margin-bottom: 15px;
 
+    @include _992 {
+      padding: 25px;
+    }
+
     @include _768 {
       height: 217px;
     }
