@@ -14,7 +14,7 @@ $blocks = get_field('blocks');
     <?php if (!empty($blocks)) : ?>
         <section class="description-product">
             <?php include get_template_directory() . '/assets/images/text-overlay-img.php' ?>
-            <div class="container-xl">
+            <div class="container">
                 <div class="description-product__wrapper">
                     <?php foreach ($blocks as $key => $block) : ?>
                         <?php

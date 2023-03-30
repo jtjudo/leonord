@@ -173,6 +173,10 @@
       max-height: 160px;
       object-fit: contain;
       padding: 35px;
+
+      @include _768 {
+        padding: 10px;
+      }
     }
 
     &.swiper-slide-thumb-active {
@@ -191,6 +195,10 @@
       right: 51%;
       left: unset;
     }
+
+    @include _768 {
+      top: 236px;
+    }
   }
 
   .swiper-button-next {
@@ -203,6 +211,10 @@
       top: 380px;
       left: 51%;
       right: unset;
+    }
+
+    @include _768 {
+      top: 236px;
     }
   }
 
