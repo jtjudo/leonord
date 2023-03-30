@@ -2,10 +2,15 @@
   color: $c-white;
   background-repeat: no-repeat;
   background-position-x: 52%;
-  background-position-y: -30px;
+  background-position-y: -15px;
+  margin-bottom: 115px;
 
   @include _1440 {
     background-image: none !important;
+  }
+
+  @include _768 {
+    margin-bottom: 50px;
   }
 
   &__wrapper {
