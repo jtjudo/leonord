@@ -13,6 +13,64 @@ class Ajax
     {
         add_action('wp_ajax_popular-product', [$this, 'popularProduct']);
         add_action('wp_ajax_popular-product', [$this, 'popularProduct']);
+
+        add_action('wp_ajax_sort-product', [$this, 'sortProduct']);
+        add_action('wp_ajax_sort-product', [$this, 'sortProduct']);
+    }
+
+    public function sortProduct()
+    {
+        $format = $_POST['format'];
+        $termId = $_POST['termId'];
+        $term = get_term($termId, 'product-category');
+        $products = $this->getProducts($term, $format);
+
+        include $this->ajax_blocks_path . 'sort-product-ajax.php';
+        wp_die();
+    }
+
+    public function getProducts(
+        WP_Term $term,
+        string $sort = 'popular',
+    ): array {
+        $defaultArgs = [
+            'post_type' => 'products',
+            'posts_per_page' => -1,
+            'post_status' => 'publish',
+            'tax_query' => [
+                [
+                    'taxonomy' => $term->taxonomy,
+                    'field' => 'term_id',
+                    'terms' => $term->term_id
+                ]
+            ]
+        ];
+
+        if ($sort === 'new') {
+            $order = [
+                'meta_key' => 'new',
+                'orderby' => 'meta_value_num',
+                'order' => 'DESC',
+            ];
+        }
+
+        if ($sort === 'discount') {
+            $order = [
+                'meta_key' => 'discount',
+                'orderby' => 'meta_value_num',
+                'order' => 'DESC',
+            ];
+        }
+
+        if ($sort === 'popular') {
+            $order = [
+                'meta_key' => 'popular',
+                'orderby' => 'meta_value_num',
+                'order' => 'DESC',
+            ];
+        }
+
+        return get_posts(array_merge($defaultArgs, $order ?? []));
     }
 
     public function popularProduct(): void

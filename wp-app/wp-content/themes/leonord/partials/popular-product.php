@@ -14,9 +14,9 @@ $products = $ajax->get_recommendations('popular');
                 <?php endif; ?>
             <?php else: ?>
                 <div class="popular-product-sort">
-                    <button class="button" data-format="new">Новинки</button>
-                    <button class="button button-active" data-format="popular">Популярные</button>
-                    <button class="button" data-format="discount">Скидки</button>
+                    <button class="button-sort" data-format="new">Новинки</button>
+                    <button class="button-sort button-active" data-format="popular">Популярные</button>
+                    <button class="button-sort" data-format="discount">Скидки</button>
                 </div>
             <?php endif; ?>
         </div>

@@ -1,16 +1,6 @@
 .tax-category {
   h1 {
-    font-family: 'Neo Sans Cyr Light';
-    font-size: 50px;
-    line-height: 39px;
     margin-bottom: 30px;
-    margin-top: 33px;
-
-    @include _992 {
-      font-size: 30px;
-      line-height: 42px;
-      margin-top: 38px;
-    }
   }
 
   .subcategory-top {
@@ -52,6 +42,31 @@
     }
   }
 
+  .mobile-button {
+    display: none;
+
+    @include _992 {
+      display: block;
+      text-align: center;
+      margin-top: 43px;
+    }
+  }
+}
+
+.tax-category, .tax-subcategory {
+  h1 {
+    font-family: 'Neo Sans Cyr Light';
+    font-size: 50px;
+    line-height: 39px;
+    margin-top: 33px;
+
+    @include _992 {
+      font-size: 30px;
+      line-height: 42px;
+      margin-top: 38px;
+    }
+  }
+
   .tax-category__description {
     margin: 63px 0 100px 0;
 
@@ -76,14 +91,71 @@
       margin-top: 39px;
     }
   }
+}
 
-  .mobile-button {
-    display: none;
+.tax-subcategory {
+  h1 {
+    margin: 0;
+  }
+
+  .tax-subcategory__top {
+    display: flex;
+    align-items: center;
+    gap: 29px;
+    margin: 33px 0;
 
     @include _992 {
-      display: block;
-      text-align: center;
-      margin-top: 43px;
+      margin: 38px 0 26px 0;
+    }
+
+    @include _768 {
+      gap: 26px;
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    p {
+      color: $c-gray8;
+      font-family: 'Neo Sans Cyr Light';
+      font-size: 20px;
+      line-height: 27px;
+    }
+  }
+
+  .tax-subcategory {
+    display: flex;
+    gap: 35px;
+    flex-wrap: wrap;
+  }
+
+  .tax-subcategory__wrapper {
+    position: relative;
+    margin-top: 35px;
+    margin-bottom: 100px;
+
+    @include _992 {
+      margin-bottom: 43px;
+    }
+  }
+
+  .tax-subcategory__results {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    row-gap: 57px;
+    column-gap: 42px;
+
+    @include _1440 {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @include _1280 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include _768 {
+      row-gap: 43px;
+      column-gap: 17px;
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 }

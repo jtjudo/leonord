@@ -55,21 +55,6 @@
     @include _768 {
       justify-content: center;
     }
-
-    .button {
-      font-size: 18px;
-      line-height: 26px;
-      color: $c-white;
-      padding: 0;
-      border: unset;
-      border-bottom: 1px solid $c-gray1;
-    }
-
-    .button.button-active {
-      color: $c-orange;
-      border: unset;
-      border-bottom: 1px solid $c-orange;
-    }
   }
 }
 
@@ -108,4 +93,19 @@
       cursor: not-allowed;
     }
   }
+}
+
+.button-sort {
+  font-size: 18px;
+  line-height: 26px;
+  color: $c-white;
+  padding: 0;
+  border: unset;
+  border-bottom: 1px solid $c-gray1;
+}
+
+.button-sort.button-active {
+  color: $c-orange;
+  border: unset;
+  border-bottom: 1px solid $c-orange;
 }

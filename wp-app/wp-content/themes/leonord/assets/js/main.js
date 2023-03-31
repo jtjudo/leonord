@@ -15,6 +15,7 @@
 //=include partials/novelty-slider.js
 //=include partials/YoutubeVideoPlayer.js
 //=include partials/single-product.js
+//=include partials/product-sort.js
 
 
 /**** MODULES ****/
