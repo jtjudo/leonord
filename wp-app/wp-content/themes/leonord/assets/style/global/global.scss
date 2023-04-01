@@ -20,6 +20,17 @@ body {
     }
 }
 
+.fullscreen-container {
+    max-width: 1920px;
+    margin: 0 auto;
+    //padding: 0 40px;
+    width: 100%;
+
+    @include _992 {
+        padding: 0 20px;
+    }
+}
+
 .container-xl {
     max-width: 1790px;
     margin: 0 auto;

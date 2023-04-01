@@ -1,0 +1,16 @@
+.fullscreen-slider {
+
+  @include _480 {
+    margin-bottom: 45px;
+  }
+
+  .custom-slider-navigation {
+    display: none;
+
+    @include _480 {
+      display: flex;
+    }
+  }
+
+
+}
