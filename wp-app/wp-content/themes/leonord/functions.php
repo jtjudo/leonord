@@ -63,3 +63,25 @@ function my_acf_block_render_callback($block)
         include(get_theme_file_path("modules/" . $slug . '/' . $slug . ".php"));
     }
 }
+
+add_action( 'pre_get_posts', function( $q )
+{
+    if( $title = $q->get( '_meta_or_title' ) )
+    {
+        add_filter( 'get_meta_sql', function( $sql ) use ( $title )
+        {
+            global $wpdb;
+
+            static $nr = 0;
+            if( 0 != $nr++ ) return $sql;
+
+            $sql['where'] = sprintf(
+                " AND ( %s OR %s ) ",
+                $wpdb->prepare( "{$wpdb->posts}.post_title LIKE %s",  '%' . $title . '%'),
+                mb_substr( $sql['where'], 5, mb_strlen( $sql['where'] ) )
+            );
+
+            return $sql;
+        });
+    }
+});

@@ -9,9 +9,9 @@ $productSlug = $productCategories ? $productCategories[0]->slug : '';
 $linkForBack = sprintf('%s/product-category/%s', get_home_url(), $productSlug);
 $images = get_field('images', $product);
 $vendorCode = get_field('vendor_code', $product);
-$isNew = get_field('new', $product);
 $characteristics = get_field('characteristics', $product);
 $counterForCharacteristic = 1;
+$dataOverlay = getOverlayClass($product);
 
 ?>
 
@@ -40,9 +40,8 @@ $counterForCharacteristic = 1;
                                                      alt="<?= $image['title'] ?>">
                                             </picture>
                                         </a>
-
-                                        <?php if ($isNew) : ?>
-                                            <div class="productSwiperTop-new">новинка</div>
+                                        <?php if (!empty($dataOverlay)) : ?>
+                                            <div class="<?= $dataOverlay['class'] ?>"><?= $dataOverlay['name'] ?></div>
                                         <?php endif; ?>
                                     </div>
                                 <?php endforeach; ?>

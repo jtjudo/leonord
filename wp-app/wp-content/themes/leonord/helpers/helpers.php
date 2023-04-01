@@ -39,3 +39,42 @@ function getEndingWord(
 
     return 'моделей';
 }
+
+function getCurrentUrl(): string
+{
+    return (empty($_SERVER['HTTPS']) ? 'http' : 'https') . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+}
+
+function getParamsByUrl(
+    string $url,
+): array {
+    $parts = parse_url($url);
+
+    parse_str($parts['query'] ?? '', $query);
+
+    return $query;
+}
+
+function getOverlayClass(
+    WP_Post $product,
+): ?array {
+    $isNew = get_field('new', $product);
+
+    if ($isNew) {
+        return [
+            'class' => 'overlay-new',
+            'name' => 'новинка',
+        ];
+    }
+
+    $isDiscount = get_field('discount', $product);
+
+    if ($isDiscount) {
+        return [
+            'class' => 'overlay-discount',
+            'name' => 'скидка',
+        ];
+    }
+
+    return null;
+}

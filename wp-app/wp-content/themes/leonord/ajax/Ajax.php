@@ -16,9 +16,42 @@ class Ajax
 
         add_action('wp_ajax_sort-product', [$this, 'sortProduct']);
         add_action('wp_ajax_sort-product', [$this, 'sortProduct']);
+
+        add_action('wp_ajax_search-page-product', [$this, 'searchProduct']);
+        add_action('wp_ajax_search-page-product', [$this, 'searchProduct']);
     }
 
-    public function sortProduct()
+    public function searchProduct()
+    {
+        $keyword = $_POST['keyword'];
+        $products = $this->getSearchProduct($keyword);
+
+        include $this->ajax_blocks_path . 'search-product-ajax.php';
+        wp_die();
+    }
+
+    public function getSearchProduct(
+        string $keyword = '',
+    ): array {
+        $defaultArgs = [
+            'post_type' => 'products',
+            'posts_per_page' => -1,
+            'post_status' => 'publish',
+            'order' => 'ASC',
+            '_meta_or_title' => $keyword,
+            'meta_query'    => [
+                [
+                    'key'     => 'vendor_code',
+                    'value'   => $keyword,
+                    'compare' => 'LIKE'
+                ]
+            ],
+        ];
+
+        return get_posts($defaultArgs);
+    }
+
+    public function sortProduct(): void
     {
         $format = $_POST['format'];
         $termId = $_POST['termId'];
@@ -31,7 +64,7 @@ class Ajax
 
     public function getProducts(
         WP_Term $term,
-        string $sort = 'popular',
+        string  $sort = 'popular',
     ): array {
         $defaultArgs = [
             'post_type' => 'products',
@@ -121,7 +154,7 @@ class Ajax
 
     public function getVideos(
         $count = 10,
-    ):array {
+    ): array {
         $args = [
             'post_type' => 'videos',
             'posts_per_page' => $count,
