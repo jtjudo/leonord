@@ -132,6 +132,9 @@ function custom_register_post_types()
             "name_lowercase_plural" => "Новости",
             'menu_icon' => 'dashicons-welcome-write-blog',
             "supports" => ['title', 'editor'],
+            'rewrite' => [
+                'slug' => 'blog'
+            ],
             "has_archive" => false,
         ],
         [
@@ -178,7 +181,7 @@ function custom_register_post_types()
             'show_in_rest' => true,
             'supports' => $post_type["supports"],
             'taxonomies' => $post_type["taxonomies"] ?? [],
-
+            'rewrite' => $post_type['rewrite'] ?? []
         ];
         register_post_type($post_type["post_type_name"], $post_type_args);
     }
