@@ -68,6 +68,35 @@ function create_taxonomy()
         'update_count_callback' => '_update_post_term_count',
         'query_var' => true,
     ]);
+
+    register_taxonomy('news-category', ['news'], [
+        'label' => __('product category'),
+        'rewrite' => ['slug' => 'news'],
+        'labels' => [
+            'name' => 'Категория',
+            'singular_name' => 'Категории',
+            'search_items' => 'Найти',
+            'all_items' => 'Все категории',
+            'view_item ' => 'Просмотреть категорию',
+            'parent_item' => 'Родительская категория',
+            'parent_item_colon' => 'Родительская категория:',
+            'edit_item' => 'Редактировать категорию',
+            'update_item' => 'Обновить категорию',
+            'add_new_item' => 'Добавить новую категорию',
+            'new_item_name' => 'Новое название категории',
+            'menu_name' => 'Категории',
+        ],
+        'public' => true,
+        'hierarchical' => true,
+        'capabilities' => [],
+        'meta_box_cb' => null,
+        'show_admin_column' => false,
+        'show_in_rest' => true,
+        'show_ui' => true,
+        'publicly_queryable' => true,
+        'update_count_callback' => '_update_post_term_count',
+        'query_var' => true,
+    ]);
 }
 
 add_action('init', 'create_taxonomy');

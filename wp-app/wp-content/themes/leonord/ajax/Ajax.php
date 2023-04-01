@@ -153,7 +153,7 @@ class Ajax
     }
 
     public function getVideos(
-        $count = 10,
+        int $count = 10,
     ): array {
         $args = [
             'post_type' => 'videos',
@@ -163,5 +163,23 @@ class Ajax
         ];
 
         return get_posts($args);
+    }
+
+    public function getNewsByCategory(
+        WP_Term $category
+    ):array {
+        return get_posts(
+            array(
+                'posts_per_page' => -1,
+                'post_type' => 'news',
+                'tax_query' => array(
+                    array(
+                        'taxonomy' => 'news-category',
+                        'field' => 'term_id',
+                        'terms' => $category->term_id,
+                    )
+                )
+            )
+        );
     }
 }
