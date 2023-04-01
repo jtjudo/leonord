@@ -1,0 +1,66 @@
+.features-list {
+  margin-bottom: 80px;
+
+  @include _992 {
+    margin-bottom: 70px;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+
+    @include _480 {
+      gap: 45px;
+    }
+  }
+
+  &__title {
+    line-height: 45px;
+    text-align: left;
+  }
+
+  &__text {
+    line-height: 29px;
+    font-size: 16px;
+
+    p:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+
+    @include _992 {
+      flex-direction: column;
+    }
+    @include _768 {
+      gap: 50px;
+    }
+
+    @include _480 {
+      gap: 30px;
+    }
+  }
+
+  &__left {
+    flex-basis: 50%;
+  }
+
+  &__right {
+    flex-basis: 50%;
+  }
+
+  .reverse {
+    .features-list__right {
+        order: -1;
+
+        @include _992 {
+          order: unset;
+        }
+      }
+  }
+}
