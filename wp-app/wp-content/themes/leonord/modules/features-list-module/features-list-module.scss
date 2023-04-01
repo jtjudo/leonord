@@ -18,11 +18,18 @@
   &__title {
     line-height: 45px;
     text-align: left;
+
+    @include _480 {
+      font-size: 32px;
+    }
   }
 
   &__text {
     line-height: 29px;
     font-size: 16px;
+    @include _480 {
+      font-size: 14px;
+    }
 
     p:not(:last-child) {
       margin-bottom: 15px;

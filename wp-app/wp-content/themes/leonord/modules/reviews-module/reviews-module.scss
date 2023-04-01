@@ -8,5 +8,11 @@
   .text-overlay-image {
     top: 0;
   }
+
+  .reviews-module {
+    @include _480 {
+      padding-bottom: 0;
+    }
+  }
 }
 
