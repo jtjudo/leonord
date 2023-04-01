@@ -1,0 +1,85 @@
+.article {
+  &__buttons {
+    display: flex;
+    gap: 17px;
+
+    margin-bottom: 27px;
+  }
+
+  &__photo {
+    object-fit: contain;
+
+    &-wrapper {
+      display: flex;
+      position: relative;
+      margin-bottom: 45px;
+    }
+
+    &-watermark {
+      width: 136px;
+      height: 136px;
+      position: absolute;
+      bottom: 40px;
+      right: 40px;
+    }
+  }
+
+  &__text {
+    &-wrapper {
+      max-width: 1203px;
+      line-height: 30px;
+      margin-bottom: 115px;
+
+      h1, h2, h3, h4, h5 {
+        font-size: 25px;
+        line-height: 30px;
+        margin-bottom: 20px;
+        margin-top: 50px;
+      }
+
+      p {
+        margin-bottom: 40px;
+      }
+
+      ul, ol {
+        li {
+          padding-left: 12px;
+        }
+      }
+
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 25px;
+
+        li {
+          display: flex;
+          position: relative;
+
+          &:before {
+            position: absolute;
+            margin-top: 11px;
+            left: 0;
+            content: '';
+            width: 7px;
+            height: 7px;
+            background-color: $c-orange;
+            border-radius: 50%;
+            display: block;
+
+          }
+        }
+      }
+    }
+  }
+
+  .news {
+
+    .container-xs {
+      padding: 0;
+    }
+
+  }
+}

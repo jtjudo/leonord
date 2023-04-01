@@ -202,13 +202,19 @@ body {
 
 .btn {
     padding: 20px 65px;
-    border: 1px solid $c-orange;
+    border: 1px solid $c-white;
     font-family: 'Neo Sans Cyr Medium';
     font-size: 16px;
     line-height: 24px;
-    color: $c-orange;
+    color: $c-white;
     text-transform: uppercase;
     width: max-content;
+
+    &:hover {
+        border-color: $c-orange;
+        color: $c-orange;
+    }
+
 
     @include _1280 {
         margin: 0 auto;

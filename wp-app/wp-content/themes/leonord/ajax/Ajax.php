@@ -166,11 +166,12 @@ class Ajax
     }
 
     public function getNewsByCategory(
-        WP_Term $category
+        WP_Term $category,
+        int $limit = null
     ):array {
         return get_posts(
             array(
-                'posts_per_page' => -1,
+                'posts_per_page' => $limit ?: -1,
                 'post_type' => 'news',
                 'tax_query' => array(
                     array(
@@ -181,5 +182,16 @@ class Ajax
                 )
             )
         );
+    }
+
+    public function getRandomNews():array {
+        $args = [
+            'post_type' => 'news',
+            'posts_per_page' => 10,
+            'post_status' => 'publish',
+            'orderby' => 'rand'
+        ];
+
+        return get_posts($args);
     }
 }
