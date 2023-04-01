@@ -21,6 +21,7 @@ $reviews = get_field('reviews');
                 <h2 class="heading">Отзывы о нас</h2>
                 <?php include get_template_directory() . '/components/modules/reviews-slider.php' ?>
             </div>
+            <?php include get_template_directory() . '/assets/images/text-overlay-img.php' ?>
         </div>
 
     </section>

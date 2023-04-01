@@ -1,4 +1,12 @@
-.reviews-module {
+.reach {
+  padding-top: 65px;
 
+  @include _1440 {
+    padding-top: 0;
+  }
+
+  .text-overlay-image {
+    top: 0;
+  }
 }
 
