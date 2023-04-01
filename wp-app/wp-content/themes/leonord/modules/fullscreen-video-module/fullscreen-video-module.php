@@ -9,12 +9,6 @@ Mode: preview
 
 <?php
 $videos = get_field('videos');
-//$title = get_field('title');
-//$description = get_field('description');
-//$link = get_field('link');
-//$gallery = get_field('gallery');
-//$secondLogo = get_field('second_logo', 'option');
-//$ajax = new Ajax();
 ?>
 
 <?php if (!is_admin()) : ?>
