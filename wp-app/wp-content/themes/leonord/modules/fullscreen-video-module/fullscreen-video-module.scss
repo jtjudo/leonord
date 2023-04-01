@@ -1,4 +1,5 @@
 .fullscreen-slider {
+  margin-bottom: 150px;
 
   @include _480 {
     margin-bottom: 45px;
@@ -12,5 +13,16 @@
     }
   }
 
+  .custom-slider-navigation {
+    bottom: -40px;
+    width: 70px;
+    margin: 0 auto;
+    top: unset;
+    display: block;
+
+    @include _480 {
+      bottom: 70px;
+    }
+  }
 
 }
