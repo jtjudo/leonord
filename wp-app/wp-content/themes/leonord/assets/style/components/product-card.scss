@@ -49,6 +49,7 @@
     color: $c-white;
 
     @include _768 {
+      margin-bottom: 10px;
       font-size: 16px;
       line-height: 23px;
     }

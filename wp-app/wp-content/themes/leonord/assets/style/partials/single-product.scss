@@ -111,20 +111,6 @@
     overflow: hidden;
     position: relative;
     align-items: center;
-
-    &-new {
-      font-family: 'Neo Sans Cyr Medium';
-      font-size: 14px;
-      line-height: 19px;
-      text-transform: uppercase;
-      padding: 10px 22px;
-      background: rgba(35, 35, 35, 0.7);
-      backdrop-filter: blur(5.69277px);
-      position: absolute;
-      top: 17px;
-      left: 19px;
-      color: $c-white;
-    }
   }
 
   .slide-top {
@@ -173,6 +159,10 @@
       max-height: 160px;
       object-fit: contain;
       padding: 35px;
+
+      @include _768 {
+        padding: 10px;
+      }
     }
 
     &.swiper-slide-thumb-active {
@@ -191,6 +181,10 @@
       right: 51%;
       left: unset;
     }
+
+    @include _768 {
+      top: 236px;
+    }
   }
 
   .swiper-button-next {
@@ -203,6 +197,10 @@
       top: 380px;
       left: 51%;
       right: unset;
+    }
+
+    @include _768 {
+      top: 236px;
     }
   }
 

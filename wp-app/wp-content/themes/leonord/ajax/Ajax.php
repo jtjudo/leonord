@@ -13,6 +13,97 @@ class Ajax
     {
         add_action('wp_ajax_popular-product', [$this, 'popularProduct']);
         add_action('wp_ajax_popular-product', [$this, 'popularProduct']);
+
+        add_action('wp_ajax_sort-product', [$this, 'sortProduct']);
+        add_action('wp_ajax_sort-product', [$this, 'sortProduct']);
+
+        add_action('wp_ajax_search-page-product', [$this, 'searchProduct']);
+        add_action('wp_ajax_search-page-product', [$this, 'searchProduct']);
+    }
+
+    public function searchProduct()
+    {
+        $keyword = $_POST['keyword'];
+        $products = $this->getSearchProduct($keyword);
+
+        include $this->ajax_blocks_path . 'search-product-ajax.php';
+        wp_die();
+    }
+
+    public function getSearchProduct(
+        string $keyword = '',
+    ): array {
+        $defaultArgs = [
+            'post_type' => 'products',
+            'posts_per_page' => -1,
+            'post_status' => 'publish',
+            'order' => 'ASC',
+            '_meta_or_title' => $keyword,
+            'meta_query'    => [
+                [
+                    'key'     => 'vendor_code',
+                    'value'   => $keyword,
+                    'compare' => 'LIKE'
+                ]
+            ],
+        ];
+
+        return get_posts($defaultArgs);
+    }
+
+    public function sortProduct(): void
+    {
+        $format = $_POST['format'];
+        $termId = $_POST['termId'];
+        $term = get_term($termId, 'product-category');
+        $products = $this->getProducts($term, $format);
+
+        include $this->ajax_blocks_path . 'sort-product-ajax.php';
+        wp_die();
+    }
+
+    public function getProducts(
+        WP_Term $term,
+        string  $sort = 'popular',
+    ): array {
+        $defaultArgs = [
+            'post_type' => 'products',
+            'posts_per_page' => -1,
+            'post_status' => 'publish',
+            'tax_query' => [
+                [
+                    'taxonomy' => $term->taxonomy,
+                    'field' => 'term_id',
+                    'terms' => $term->term_id
+                ]
+            ]
+        ];
+
+        if ($sort === 'new') {
+            $order = [
+                'meta_key' => 'new',
+                'orderby' => 'meta_value_num',
+                'order' => 'DESC',
+            ];
+        }
+
+        if ($sort === 'discount') {
+            $order = [
+                'meta_key' => 'discount',
+                'orderby' => 'meta_value_num',
+                'order' => 'DESC',
+            ];
+        }
+
+        if ($sort === 'popular') {
+            $order = [
+                'meta_key' => 'popular',
+                'orderby' => 'meta_value_num',
+                'order' => 'DESC',
+            ];
+        }
+
+        return get_posts(array_merge($defaultArgs, $order ?? []));
     }
 
     public function popularProduct(): void
@@ -63,7 +154,7 @@ class Ajax
 
     public function getVideos(
         $count = 10,
-    ):array {
+    ): array {
         $args = [
             'post_type' => 'videos',
             'posts_per_page' => $count,

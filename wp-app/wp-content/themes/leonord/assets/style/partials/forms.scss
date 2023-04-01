@@ -73,36 +73,36 @@
     }
   }
 
-  input[type=text], input[type=tel], input[type=email], input[type=number] {
-    font-family: 'Neo Sans Cyr Medium';
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
-
-    color: $c-white;
-    display: flex;
-    width: 100%;
-    padding: 20px 25px;
-    background: inherit;
-    border: 1px solid $c-white;
-    margin-bottom: 21px;
-    direction: unset;
-    outline: unset;
-
-    &::placeholder {
-      color: $c-gray6;
-    }
-
-    &.wpcf7-not-valid {
-      border: 1px solid $c-red;
-    }
-  }
-
   .wpcf7-not-valid-tip {
     display: none;
   }
 
   .wpcf7 form .wpcf7-response-output {
     display: none;
+  }
+}
+
+input[type=text], input[type=tel], input[type=email], input[type=number] {
+  font-family: 'Neo Sans Cyr Medium';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+
+  color: $c-white;
+  display: flex;
+  width: 100%;
+  padding: 20px 25px;
+  background: inherit;
+  border: 1px solid $c-white;
+  margin-bottom: 21px;
+  direction: unset;
+  outline: unset;
+
+  &::placeholder {
+    color: $c-gray6;
+  }
+
+  &.wpcf7-not-valid {
+    border: 1px solid $c-red;
   }
 }

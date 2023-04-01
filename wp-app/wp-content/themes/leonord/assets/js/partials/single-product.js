@@ -10,8 +10,24 @@ class SingleProduct {
 
   swiperInit() {
     const productSwiper = new Swiper(".productSwiperBottom", {
-      spaceBetween: 20,
-      slidesPerView: 3,
+      breakpoints: {
+        0: {
+          spaceBetween: 20,
+          slidesPerView: 2,
+        },
+
+        481: {
+          spaceBetween: 20,
+          slidesPerView: 3,
+        },
+
+        1441: {
+          allowTouchMove: true,
+          slidesPerView: 4,
+        },
+      },
+      spaceBetween: 15,
+      slidesPerView: 4,
       freeMode: true,
       watchSlidesProgress: true,
       allowTouchMove: false,
