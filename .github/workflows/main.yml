@@ -11,7 +11,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: npm install && build
-        run: cd wp-app/wp-content/themes/attract/ && npm install && gulp build
+        run: cd wp-app/wp-content/themes/leonord/ && npm install && gulp build
 
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.3
