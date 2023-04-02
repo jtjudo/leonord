@@ -1,4 +1,4 @@
-class youtubeVideoPlayer {
+class youtubeVideoPlayerClass {
   constructor() {
     this.playButtons = document.querySelectorAll('.play-icon');
 
@@ -37,5 +37,5 @@ class youtubeVideoPlayer {
 }
 
 
-new youtubeVideoPlayer();
+new youtubeVideoPlayerClass();
 
