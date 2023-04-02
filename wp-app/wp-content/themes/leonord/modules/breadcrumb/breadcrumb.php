@@ -8,11 +8,17 @@ Mode: preview
 ?>
 
 <?php
-$list = $breadcrumbs ?? get_field('list') ?? [];
 $post = get_post();
+/**
+ * ['link' = ['title' => 'Главная', 'url' => 'http://'] ]
+ */
+if (!empty($breadcrumbs)) {
+    $list = $breadcrumbs;
+} else {
+    $list = get_field('list');
+}
 
-//var_dump($list);
-//die();
+$list = empty($list) ? [] : $list;
 ?>
 
 <?php if (!is_admin()) : ?>
@@ -22,18 +28,19 @@ $post = get_post();
                 <a class="breadcrumb__link" href="/">Главная</a>
             </li>
             <?php foreach ($list as $key => $item) : ?>
+                <?php $crumb = $item['link'] ?>
                 <li class="breadcrumb__item">
-                    <<?= $key === count($list) - 1 ? 'span' : 'a' ?>
+                    <a
                         class="breadcrumb__link"
-                        <?php if (!empty($item['link'])) : ?>
-                            href="<?= $item['link'] ?>"
-                        <?php endif; ?>
+                        href="<?= $crumb['url'] ?? '' ?>"
                     >
-                        <?= $item['title'] ?? $post->post_title ?>
-
-                </<?= $key === count($list) - 1 ? 'span' : 'a' ?>>
+                        <?= $crumb['title'] ?? '' ?>
+                    </a>
                 </li>
             <?php endforeach; ?>
+            <li class="breadcrumb__item">
+                <span class="breadcrumb__link"><?= $post->post_title ?></span>
+            </li>
         </ul>
     </section>
 <?php else: ?>

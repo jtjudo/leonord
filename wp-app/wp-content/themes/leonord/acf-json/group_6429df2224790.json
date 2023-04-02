@@ -29,7 +29,7 @@
                     "label": "Ссылка",
                     "name": "link",
                     "aria-label": "",
-                    "type": "page_link",
+                    "type": "link",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -38,11 +38,7 @@
                         "class": "",
                         "id": ""
                     },
-                    "post_type": "",
-                    "taxonomy": "",
-                    "allow_archives": 1,
-                    "multiple": 0,
-                    "allow_null": 0,
+                    "return_format": "array",
                     "parent_repeater": "field_6429df22fea5d"
                 }
             ]
@@ -66,5 +62,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1680465890
+    "modified": 1680467606
 }

@@ -8,12 +8,6 @@ $text = get_field('text', $post);
 $secondLogo = get_field('second_logo', 'option');
 $ajax = new Ajax();
 $products = $ajax->getRandomProducts();
-
-
-
-$breadcrumbs = [
-    ['link' => '', 'title' => $post->post_title]
-];
 ?>
 <section class="article">
     <div class="container-xs">
