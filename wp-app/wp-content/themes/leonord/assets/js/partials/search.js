@@ -1,7 +1,7 @@
 class Search {
   constructor() {
     this.showResultTitle = document.querySelector('.search-page-wrapper h3')
-    this.showResultTitleSearchWord = this.showResultTitle?.querySelector('span');
+    this.showResultTitleSearchWord = this.showResultTitle ? this.showResultTitle.querySelector('span') : null;
     this.btnSearch = document.querySelector('.search-input-container button')
     this.inputSearch = document.querySelector('.search-input-container input')
     this.ajaxContainer = document.querySelector('.search-product__container')
