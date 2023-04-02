@@ -8,9 +8,16 @@ $text = get_field('text', $post);
 $secondLogo = get_field('second_logo', 'option');
 $ajax = new Ajax();
 $products = $ajax->getRandomProducts();
+
+
+
+$breadcrumbs = [
+    ['link' => '', 'title' => $post->post_title]
+];
 ?>
 <section class="article">
     <div class="container-xs">
+        <?php include get_template_directory() . '/modules/breadcrumb/breadcrumb.php' ?>
         <h1 class="heading"><?= $post->post_title ?></h1>
         <div class="article__buttons">
             <?php if($printFile) : ?>
