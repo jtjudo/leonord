@@ -1,6 +1,7 @@
 .product-card {
   display: flex;
   flex-direction: column;
+  position: relative;
 
   &:hover {
     .product-card__top-cursor {
