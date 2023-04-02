@@ -6,6 +6,8 @@ $photo = get_field('photo', $post);
 $printFile = get_field('file', $post);
 $text = get_field('text', $post);
 $secondLogo = get_field('second_logo', 'option');
+$ajax = new Ajax();
+$products = $ajax->getRandomProducts();
 ?>
 <section class="article">
     <div class="container-xs">
@@ -32,10 +34,18 @@ $secondLogo = get_field('second_logo', 'option');
         <div class="article__text-wrapper">
             <?= $text ?? '' ?>
         </div>
+        <div class="products-wrapper">
+            <h2 class="heading products__title">Техника</h2>
+            <?php include get_template_directory() . '/modules/popular-product/popular-product.php' ?>
+        </div>
+
+
         <?php include  get_template_directory() . '/modules/news/news.php' ?>
-
-
     </div>
+    <div class="wide-overlay">
+        <?php include get_template_directory() . '/assets/images/text-overlay-img.php' ?>
+    </div>
+
 </section>
 
 <?php
