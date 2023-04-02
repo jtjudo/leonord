@@ -9,6 +9,10 @@ Mode: preview
 
 <?php
 $list = $breadcrumbs ?? get_field('list') ?? [];
+$post = get_post();
+
+//var_dump($list);
+//die();
 ?>
 
 <?php if (!is_admin()) : ?>
@@ -25,7 +29,7 @@ $list = $breadcrumbs ?? get_field('list') ?? [];
                             href="<?= $item['link'] ?>"
                         <?php endif; ?>
                     >
-                        <?= $item['title'] ?>
+                        <?= $item['title'] ?? $post->post_title ?>
 
                 </<?= $key === count($list) - 1 ? 'span' : 'a' ?>>
                 </li>

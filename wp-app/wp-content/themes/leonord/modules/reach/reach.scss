@@ -44,6 +44,7 @@
   }
 
   .text-overlay-image {
+    top: unset !important;
     bottom: -255px;
 
     @include _1440 {
