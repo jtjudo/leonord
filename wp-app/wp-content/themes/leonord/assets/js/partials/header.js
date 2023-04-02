@@ -1,4 +1,4 @@
-class Header {
+class HeaderClass {
   constructor() {
     this.init()
   }
@@ -29,4 +29,4 @@ class Header {
   }
 }
 
-new Header();
+new HeaderClass();
