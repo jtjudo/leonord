@@ -29,6 +29,9 @@ $ajax = new Ajax();
             <?php endforeach; ?>
         </div>
     </div>
+    <div class="wide-overlay">
+        <?php include get_template_directory() . '/assets/images/text-overlay-img.php' ?>
+    </div>
 </section>
 <?php
 get_footer();

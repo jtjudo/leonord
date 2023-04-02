@@ -45,7 +45,6 @@ $products = $ajax->getRandomProducts();
     <div class="wide-overlay">
         <?php include get_template_directory() . '/assets/images/text-overlay-img.php' ?>
     </div>
-
 </section>
 
 <?php
