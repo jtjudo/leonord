@@ -171,7 +171,7 @@ $slides = get_field('slides');
         </div>
         <div class="hero__overlay">
             <picture>
-                <img loading="lazy" src="<?= home_url() . '/wp-content/uploads/2023/03/background-hero.png' ?>"
+                <img loading="lazy" src="<?= home_url() . '/wp-content/uploads/2023/04/background-hero.png' ?>"
                      alt="background">
             </picture>
         </div>
