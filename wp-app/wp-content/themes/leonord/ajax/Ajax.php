@@ -152,6 +152,17 @@ class Ajax
         return get_posts(array_merge($defaultArgs, $args));
     }
 
+    public function getRandomProducts():array {
+        $args = [
+            'post_type' => 'products',
+            'posts_per_page' => 10,
+            'post_status' => 'publish',
+            'orderby' => 'rand'
+        ];
+
+        return get_posts($args);
+    }
+
     public function getVideos(
         int $count = 10,
     ): array {

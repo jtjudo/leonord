@@ -1,8 +1,10 @@
 <?php
 $ajax = new Ajax();
-$products = $ajax->get_recommendations('popular');
+$products = $products ?? $ajax->get_recommendations('popular');
+
 ?>
 
+<?php if ($products) : ?>
 <section class="popular-product">
     <div class="container">
         <div class="popular-product__top <?php if ($isSingle) : ?> single-product <?php endif; ?>">
@@ -23,3 +25,4 @@ $products = $ajax->get_recommendations('popular');
     </div>
     <?php include get_template_directory() . '/components/product-slider-cards.php' ?>
 </section>
+<?php endif; ?>

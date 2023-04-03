@@ -2,8 +2,20 @@
   &__buttons {
     display: flex;
     gap: 17px;
-
     margin-bottom: 27px;
+    @include _768 {
+      flex-direction: column;
+      margin-bottom: 40px;
+    }
+
+    .btn {
+      margin: unset;
+
+      @include _480 {
+        width: 100%;
+        padding: 20px 40px;
+      }
+    }
   }
 
   &__photo {
@@ -21,6 +33,10 @@
       position: absolute;
       bottom: 40px;
       right: 40px;
+
+      @include _992 {
+        display: none;
+      }
     }
   }
 
@@ -30,6 +46,14 @@
       line-height: 30px;
       margin-bottom: 115px;
 
+      @include _992 {
+        margin-bottom: 60px;
+      }
+
+      @include _480 {
+        margin-bottom: 40px;
+      }
+
       h1, h2, h3, h4, h5 {
         font-size: 25px;
         line-height: 30px;
@@ -37,7 +61,7 @@
         margin-top: 50px;
       }
 
-      p {
+      p:not(:last-child) {
         margin-bottom: 40px;
       }
 
@@ -76,10 +100,29 @@
   }
 
   .news {
-
     .container-xs {
       padding: 0;
     }
 
+  }
+
+  .products-wrapper {
+    .container {
+      display: none;
+    }
+
+    .container-xl {
+      padding: 0;
+    }
+
+    .products__title {
+      text-align: left;
+    }
+
+    .popular-product {
+      @include _480 {
+        margin-bottom: 60px;
+      }
+    }
   }
 }

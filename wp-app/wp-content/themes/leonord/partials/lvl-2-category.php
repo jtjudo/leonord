@@ -7,6 +7,8 @@ $countProducts = count($products);
 
 <section class="tax-subcategory">
     <div class="container">
+        <?php include get_template_directory() . '/modules/breadcrumb/breadcrumb.php' ?>
+
         <div class="tax-subcategory__top">
             <h1><?= $currentCategory->name ?? '' ?></h1>
             <p><?= $countProducts . ' ', getEndingWord($countProducts); ?> </p>

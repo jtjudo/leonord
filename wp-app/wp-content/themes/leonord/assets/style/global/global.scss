@@ -252,3 +252,12 @@ body {
     background: $c-orange;
     backdrop-filter: blur(5.69277px);
 }
+
+.wide-overlay {
+    position: relative;
+    height: 170px;
+
+    @include _1440 {
+        display: none;
+    }
+}
