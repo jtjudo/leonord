@@ -1,0 +1,17 @@
+.videos {
+  &__title {
+    margin-top: 20px;
+  }
+
+  &__wrapper {
+    display: grid;
+    gap: 40px;
+    grid-template-columns: 1fr 1fr;
+
+    margin-bottom: 80px;
+  }
+
+  .video-card {
+    max-width: unset;
+  }
+}

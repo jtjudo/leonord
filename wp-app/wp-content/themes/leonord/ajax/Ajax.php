@@ -176,6 +176,17 @@ class Ajax
         return get_posts($args);
     }
 
+    public function getAllVideosByCreatedAt(): array {
+        $args = [
+            'post_type' => 'videos',
+            'posts_per_page' => -1,
+            'post_status' => 'publish',
+            'orderby' => 'date'
+        ];
+
+        return get_posts($args);
+    }
+
     public function getNewsByCategory(
         WP_Term $category,
         int $limit = null
