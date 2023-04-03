@@ -16,13 +16,14 @@ if (!empty($breadcrumbs)) {
     $list = $breadcrumbs;
 } else {
     $list = get_field('list');
+    $breadcrumbClass = get_field('class');
 }
 
 $list = empty($list) ? [] : $list;
 ?>
 
 <?php if (!is_admin()) : ?>
-    <section class="breadcrumb">
+    <section class="breadcrumb <?= $breadcrumbClass ?? '' ?>">
         <ul class="breadcrumb__list">
             <li class="breadcrumb__item">
                 <a class="breadcrumb__link" href="/">Главная</a>

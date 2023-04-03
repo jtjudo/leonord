@@ -2,7 +2,7 @@
   color: $c-white;
   background-repeat: no-repeat;
   background-position-x: 52%;
-  background-position-y: -15px;
+  background-position-y: 5px;
   margin-bottom: 115px;
 
   @include _1440 {
@@ -45,6 +45,14 @@
 
   &__left {
     text-align: left;
+
+    @include _768 {
+      padding-top: 0;
+    }
+
+    &:before {
+      display: none;
+    }
   }
 
   &__heading {

@@ -42,6 +42,26 @@
                     "parent_repeater": "field_6429df22fea5d"
                 }
             ]
+        },
+        {
+            "key": "field_642b1d0eb84d8",
+            "label": "Дополнительный класс",
+            "name": "class",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [
@@ -62,5 +82,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1680467606
+    "modified": 1680547096
 }
