@@ -4,6 +4,7 @@ $description = term_description($currentCategory->term_id, $currentCategory->tax
 ?>
 <section class="tax-category">
     <div class="container">
+        <?php include get_template_directory() . '/modules/breadcrumb/breadcrumb.php' ?>
         <h1><?= $currentCategory->name ?? '' ?></h1>
     </div>
     <?php if (!empty($subCategoriesIds)) : ?>

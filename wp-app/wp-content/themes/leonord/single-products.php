@@ -17,6 +17,7 @@ $dataOverlay = getOverlayClass($product);
 
 <section class="single-content">
     <div class="container">
+        <?php include get_template_directory() . '/modules/breadcrumb/breadcrumb.php' ?>
         <div class="single-content__wrapper">
             <a href="<?= $linkForBack ?>" class="single-content__btn-back">
                 <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
