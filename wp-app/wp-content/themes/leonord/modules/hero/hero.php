@@ -25,6 +25,7 @@ $slides = get_field('slides');
                         $volume = $slide['volume'] ?? '';
                         $guarantee = $slide['guarantee'] ?? '';
                         $image = $slide['image'] ?? '';
+                        $link = get_permalink($slide);
                         ?>
                         <div class="swiper-slide" style="background-image: url($image['url'])">
                             <div class="slide__wrapper">
@@ -32,7 +33,7 @@ $slides = get_field('slides');
                                     <div class="slide-left__info">
                                         <h2><?= $headline ?></h2>
                                         <p><?= $subHeadline ?></p>
-                                        <a class="btn" href="<?= $button['ur'] ?? '' ?>"
+                                        <a class="btn" href="<?= $button['url'] ?? $link ?? '' ?>"
                                            target="<?= $button['target'] ?? '' ?>"> <?= $button['title'] ?? '' ?>
                                         </a>
                                     </div>
