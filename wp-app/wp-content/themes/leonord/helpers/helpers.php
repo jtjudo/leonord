@@ -16,6 +16,25 @@ function getLevelTaxonomy(
     }
 }
 
+function getTitlesForBreadcrumb(
+    ?WP_Term $category = null,
+    array $titles = [],
+): array {
+    if (!$category) {
+        return $titles;
+    }
+
+    $titles[$category->term_id]['title'] = $category->name;
+    $titles[$category->term_id]['url'] = sprintf("%s/%s/%s", get_home_url(), $category->taxonomy, $category->slug);
+    if ($category->parent == 0) {
+        return $titles;
+    } else {
+        $category = get_term($category->parent);
+
+        return getTitlesForBreadcrumb($category, $titles);
+    }
+}
+
 #[NoReturn] function redirectTo404(): void
 {
     global $wp_query;

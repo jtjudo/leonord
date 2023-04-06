@@ -144,6 +144,8 @@ $dataOverlay = getOverlayClass($product);
 include get_template_directory() . '/modules/description-product/description-product.php';
 $title = 'Рекомендуем так же посмотреть';
 $isSingle = true;
+$ajax = new Ajax();
+$products = $ajax->get_recommendations('popular');
 include get_template_directory() . '/partials/popular-product.php';
 get_footer();
 ?>
