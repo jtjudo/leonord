@@ -22,7 +22,7 @@ $ajax = new Ajax();
             <div class="video-module__wrapper">
                 <div class="video-module__header">
                     <h2 class="video-module__title heading">Видео</h2>
-                    <a href="" class="video-module__see-more see-more">Смотреть все</a>
+                    <a href="/videos" class="video-module__see-more see-more">Смотреть все</a>
                 </div>
                 <?php
                     $videos = $ajax->getVideos();
