@@ -21,7 +21,7 @@ $btnTitle = get_field('btn_title');
             <div class="reach__wrapper">
                 <h2 class="reach__title heading"><?= $title ?? '' ?></h2>
                 <p class="reach__subtitle"><?= $subTitle ?? '' ?></p>
-                <button class="reach__btn btn"><?= $btnTitle ?></button>
+                <button class="reach__btn btn" href="javascript:;" data-fancybox="" data-src="#back-call"><?= $btnTitle ?></button>
             </div>
         </div>
         <?php include get_template_directory() . '/assets/images/text-overlay-img.php' ?>
