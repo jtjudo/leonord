@@ -24,13 +24,18 @@ $infoList = get_field('info');
                     <ul class="info-list">
                         <?php foreach ($infoList as $item) : ?>
                             <?php
-                            $icon = $item['icon'] ?? null;
-                            $title = $item['title'] ?? '';
-                            $text = $item['text'] ?? '';
+                                $icon = $item['icon'] ?? null;
+                                $title = $item['title'] ?? '';
+                                $text = $item['text'] ?? '';
+                                $link = $item['link'] ?? null;
                             ?>
                             <li class="info-item" style="background-image: url('<?= $icon['url'] ?>')">
                                 <h2 class="info-title"><?= $title ?></h2>
-                                <p class="info-text"><?= $text ?></p>
+                                <?php if($link) : ?>
+                                    <a class="info-text" href="<?= $link ?>"><?= $text ?></a>
+                                <?php else : ?>
+                                    <p class="info-text"><?= $text ?></p>
+                                <?php endif; ?>
                             </li>
                         <?php endforeach; ?>
                     </ul>
