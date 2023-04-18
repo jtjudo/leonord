@@ -237,10 +237,10 @@ $back_call_form = get_field('back_call', 'option');
                 </picture>
             </a>
             <p><?= date("Y"); ?></p>
-            <p><a href="/blog/privacy-policy">Политика конфиденциальности</a></p>
+            <p><a class="footer__custom-link" href="/blog/privacy-policy">Политика конфиденциальности</a></p>
             <div class="footer-privacy-policy__bottom">
-                <p><a href="/blog/personal-data">Согласие на обработку персональных данных</a></p>
-                <p><a href="https://ac-u.ru/">Разработка сайта — Digital-студия «Акцепт»</a></p>
+                <p><a class="footer__custom-link" href="/blog/personal-data">Согласие на обработку персональных данных</a></p>
+                <p><a class="footer__custom-link" href="https://ac-u.ru/">Разработка сайта — Digital-студия «Акцепт»</a></p>
             </div>
         </div>
     </div>
