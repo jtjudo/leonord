@@ -62,6 +62,7 @@
   .single-content__data-right {
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 
     .data-right-top {
       display: flex;
