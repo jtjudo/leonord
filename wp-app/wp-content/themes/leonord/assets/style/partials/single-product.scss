@@ -217,7 +217,7 @@
   .data-right-characteristics-group {
     .data-right-characteristic {
       display: grid;
-      grid-template-columns: max-content 1fr 90px;
+      grid-template-columns: max-content 1fr 110px;
       gap: 10px;
 
       @include _480 {
@@ -254,7 +254,7 @@
       color: $c-white;
       font-size: 16px;
       line-height: 26px;
-      width: 90px;
+      width: 110px;
     }
   }
 
