@@ -12,13 +12,13 @@ class Ajax
     public function register(): void
     {
         add_action('wp_ajax_popular-product', [$this, 'popularProduct']);
-        add_action('wp_ajax_popular-product', [$this, 'popularProduct']);
+        add_action('wp_ajax_nopriv_popular-product', [$this, 'popularProduct']);
 
         add_action('wp_ajax_sort-product', [$this, 'sortProduct']);
-        add_action('wp_ajax_sort-product', [$this, 'sortProduct']);
+        add_action('wp_ajax_nopriv_sort-product', [$this, 'sortProduct']);
 
         add_action('wp_ajax_search-page-product', [$this, 'searchProduct']);
-        add_action('wp_ajax_search-page-product', [$this, 'searchProduct']);
+        add_action('wp_ajax_nopriv_search-page-product', [$this, 'searchProduct']);
     }
 
     public function searchProduct()

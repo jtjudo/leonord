@@ -15,14 +15,23 @@ class Search {
 
   search() {
     this.btnSearch && this.btnSearch.addEventListener('click', () => {
-      startLoader('.search-product__wrapper .loader-container')
-      this.showResultTitle.classList.remove('js-hidden');
-      this.showResultTitleSearchWord.textContent = this.inputSearch.value
-      this.keyword = this.inputSearch.value
-      this.setUrlParam('keyword', this.keyword)
-      this.ajax()
+      this.performSearch()
     })
 
+    this.inputSearch && this.inputSearch.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter') {
+        this.performSearch();
+      }
+    });
+  }
+
+  performSearch() {
+    startLoader('.search-product__wrapper .loader-container');
+    this.showResultTitle.classList.remove('js-hidden');
+    this.showResultTitleSearchWord.textContent = this.inputSearch.value;
+    this.keyword = this.inputSearch.value;
+    this.setUrlParam('keyword', this.keyword);
+    this.ajax();
   }
 
   ajax() {
