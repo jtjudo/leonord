@@ -17,6 +17,7 @@
 //=include partials/single-product.js
 //=include partials/product-sort.js
 //=include partials/search.js
+//=include partials/forms.js
 
 
 /**** MODULES ****/
