@@ -106,3 +106,7 @@ input[type=text], input[type=tel], input[type=email], input[type=number], textar
     color: $c-white;
   }
 }
+
+.grecaptcha-badge {
+  display: none;
+}
