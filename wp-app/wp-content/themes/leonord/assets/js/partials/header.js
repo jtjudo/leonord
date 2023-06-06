@@ -15,6 +15,7 @@ class HeaderClass {
 
     button && button.addEventListener('click', () => {
       menu.classList.toggle('js-open');
+      html.style.overflow = (html.style.overflow === 'hidden') ? 'unset' : 'hidden'
     })
   }
 
