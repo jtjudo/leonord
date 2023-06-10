@@ -7,13 +7,21 @@ $email = get_field('email', 'option');
 $address = get_field('address', 'option');
 $working_mode = get_field('working_mode', 'option');
 $back_call_form = get_field('back_call', 'option');
+$product_form = get_field('product_form', 'option');
 ?>
 
 <footer id="footer" class="footer">
-    <div class="modal-form form-back-call" id="back-call">
+    <div class="modal-form" id="back-call">
         <div class="form-wrapper">
-            <p class="form-headline">Заказать звонок</p>
+            <p class="form-headline">Написать нам</p>
             <?= $back_call_form ?>
+        </div>
+    </div>
+
+    <div class="modal-form" id="product-form">
+        <div class="form-wrapper">
+            <p class="form-headline">Запросить цену</p>
+            <?= $product_form ?>
         </div>
     </div>
 

@@ -109,7 +109,7 @@ $dataOverlay = getOverlayClass($product);
                 <div class="single-content__data-right">
                     <div class="data-right-top">
                         <p>Артикул: <?= $vendorCode ?? '' ?></p>
-                        <a href="javascript:;" data-fancybox="" data-src="#back-call">запросить цену</a>
+                        <a href="javascript:;" data-fancybox="" data-src="#product-form">запросить цену</a>
                     </div>
                     <h2> <?= $product->post_title ?> </h2>
                     <p class="data-right-characteristics-title">Характеристики</p>
