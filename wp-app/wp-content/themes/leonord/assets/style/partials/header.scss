@@ -48,9 +48,6 @@ header {
     align-items: center;
     height: 100%;
     gap: 60px;
-    @include _480 {
-      overflow-y: scroll;
-    }
 
     @include _1700 {
       gap: 16px;
