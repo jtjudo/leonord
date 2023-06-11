@@ -161,7 +161,7 @@ header {
       left: 0;
       width: 100vw;
       background: $c-background;
-      z-index: 100;
+      z-index: 100000;
 
       &.js-open {
         display: flex;

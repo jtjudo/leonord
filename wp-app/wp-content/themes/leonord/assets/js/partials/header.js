@@ -14,8 +14,9 @@ class HeaderClass {
     const menu = document.querySelector('.header__wrapper-mobile-menu');
 
     button && button.addEventListener('click', () => {
+      const bodyHeight = document.body.offsetHeight;
+      menu.setAttribute("style",`height:${bodyHeight}px`);
       menu.classList.toggle('js-open');
-      html.style.overflow = (html.style.overflow === 'hidden') ? 'unset' : 'hidden'
     })
   }
 
