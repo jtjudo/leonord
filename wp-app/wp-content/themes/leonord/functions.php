@@ -85,3 +85,5 @@ add_action( 'pre_get_posts', function( $q )
         });
     }
 });
+
+add_filter( 'allow_dev_auto_core_updates', '__return_false' );
